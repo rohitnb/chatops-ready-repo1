@@ -1,0 +1,15 @@
+name: Are any workflows tampered with
+
+on: 
+  pull_request_target:
+    paths:
+      - '.github/workflows/**.yml'
+
+jobs:
+  workflow-tamper-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Error out
+      run: |
+        echo "Modifications to the Actions YAML files detected. Codeowners notified!"
+        exit 1

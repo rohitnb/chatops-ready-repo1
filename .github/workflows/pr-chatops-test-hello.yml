@@ -1,0 +1,8 @@
+name: PR ChatOps Hello Command
+
+on: 
+  issue_comment:
+
+jobs:
+  reuse-pr-hello-yaml:
+    uses: rohitnb/chatops-reusable-workflows/.github/workflows/pr-hello.yml@main

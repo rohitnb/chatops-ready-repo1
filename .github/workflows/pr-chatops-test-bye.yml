@@ -1,0 +1,9 @@
+name: PR ChatOps Bye Command
+
+on: 
+  issue_comment:
+
+jobs:
+  reuse-pr-bye-yaml:
+    uses: rohitnb/chatops-reusable-workflows/.github/workflows/pr-bye.yml@main
+  
